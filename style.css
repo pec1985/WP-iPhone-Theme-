@@ -1,6 +1,7 @@
 body{
 	font-family:Helvetica;
 	margin:0;
+	background-image:url(img/UIPinStripe.png);
 }
 #main{
 	position:absolute;
@@ -11,23 +12,25 @@ body{
 	height:44px;
 	background-image:url(img/header.png);
 	text-align:center;
-	z-index:1;
+	z-index:1000;
 }
 #tabbar{
-	position:static;
-	width:100%;
-    bottom:-44px;
-	height:44px;
+	position:absolute;
+	width:320px;
+	height:45px;
+	overflow:auto;
 	background-image:url(img/tabbar.png);
 	text-align:center;
-	z-index:2;
+	z-index:1000;
 }
-.tab{
-	background-image:url(img/tab.png);
+#tabbar .tab{
     height:40px;
     margin:2px;
     float:left;
     border-radius:2px;
+}
+#tabbar .selected{
+	background-image:url(img/tab.png);
 }
 #tabbar .tab p{
     font-size:12px;
@@ -122,7 +125,7 @@ body{
 /*	border:1px solid #999;*/
 	left:0px;
     overflow:scroll;
-    z-index:5;
+    z-index:500;
 }
 .content{
 	float:left;
@@ -131,34 +134,7 @@ body{
 	background-image:url(img/UIPinStripe.png);
 }
 /*
-.listRowTemplate_template:hover {
-    background: rgb(38, 127, 239) url(img/selectedRowiPhone.png);
-    -webkit-background-size: 100%;
-    color:white;
-}
 */
-.listRowTemplate_template {
-    position: relative;
-    list-style-type: none;
-    height: 43px;
-    width: auto;
-    overflow: hidden;
-    margin: 0px;
-    padding: 0px;
-    border-width: 0px;
-    border-style: solid;
-    border-color: rgb(172, 172, 172);
-}
-.listRowTemplate_template>.button {
-	background-image:url('img/UITableNext.png');
-	background-repeat: no-repeat;
-	height: 13px;
-	margin-left: auto;
-	position: absolute;
-	right: 11px;
-	top: 17px;
-	width: 8px;
-}
 .list {
     overflow: hidden;
     display: block;
@@ -181,6 +157,34 @@ body{
     position: relative;
     width: auto;
     -webkit-margin-top-collapse: separate;
+}
+.list li {
+    position: relative;
+    list-style-type: none;
+    height: 43px;
+    width: auto;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(172, 172, 172);
+}
+.list li.selected {
+    background: rgb(38, 127, 239) url(img/selectedRowiPhone.png);
+    -webkit-background-size: 100%;
+    color:white;
+}
+
+.list li>.button {
+	background-image:url('img/UITableNext.png');
+	background-repeat: no-repeat;
+	height: 13px;
+	margin-left: auto;
+	position: absolute;
+	right: 11px;
+	top: 17px;
+	width: 8px;
 }
 .label_template {
     position: absolute;
@@ -224,10 +228,6 @@ body{
 	margin: 10px 9px 10px 10px;
 	padding-bottom: 0px;
 	text-align: left;
-}
-#scroll{
-	position:relative;
-	min-height:300px;
 }
 #pageTitle{
 -webkit-box-sizing: border-box;

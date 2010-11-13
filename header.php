@@ -24,4 +24,3 @@
 				</div>
 			</div>
 			<div id="navigation">
-				<div id="scroll" class="content" name="0">
