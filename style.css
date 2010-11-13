@@ -1,0 +1,250 @@
+body{
+	font-family:Helvetica;
+	margin:0;
+}
+#main{
+	position:absolute;
+}
+#header{
+	position:relative;
+	width:100%;
+	height:44px;
+	background-image:url(img/header.png);
+	text-align:center;
+	z-index:1;
+}
+#tabbar{
+	position:static;
+	width:100%;
+    bottom:-44px;
+	height:44px;
+	background-image:url(img/tabbar.png);
+	text-align:center;
+	z-index:2;
+}
+.tab{
+	background-image:url(img/tab.png);
+    height:40px;
+    margin:2px;
+    float:left;
+    border-radius:2px;
+}
+#tabbar .tab p{
+    font-size:12px;
+    color:white;
+    line-height:0px;
+    margin-top:0px;
+}
+
+/*
+#otro{
+	position:absolute;
+	top:20px;
+	width:300px;
+	height:44px;
+	background-color:blue;
+	opacity:.8;
+	text-align:center;
+}
+*/
+#next{
+	position:relative;
+	float:right;
+	right:5px;
+	top:8px;
+	width:30px;
+	height:28;
+	background-color:black;
+}
+#back{
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	-webkit-user-select: none;
+	bottom: auto;
+	color: white;
+	cursor: default;
+	font-family: Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	height: 30px;
+	left: 5px;
+	margin-top: 0px;
+	overflow: hidden;
+	position: absolute;
+	right: auto;
+	text-align: center;
+	text-overflow: ellipsis;
+	text-shadow: rgba(0, 0, 0, 0.597656) 0px -1px 0px;
+	top: 7px;
+	white-space: nowrap;
+	width: 60px;
+	visibility:hidden;
+	}
+	#back .one{		
+		border-width: 0px 5px 0px 16px;
+		-webkit-border-image:url(img/back_button.png) 0 5 0 16 repeat stretch;
+		bottom: 0px;
+		left: 0px;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+	#back .two{
+		border-width: 0px 5px 0px 16px;
+		-webkit-border-image:url(img/back_button_clicked.png) 0 5 0 16 repeat stretch;
+		bottom: 0px;
+		left: 0px;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		visibility: hidden;
+	}
+	#back .three{
+		bottom: 0px;
+		left: 0px;
+		line-height: 30px;
+		margin-left: 13px;
+		margin-right: 7px;
+		overflow: hidden;
+		position: absolute;
+		right: 0px;
+		text-overflow: ellipsis;
+		top: 0px;
+	}
+
+	#back .tree .title{
+		display: inline;
+		position: static;
+	}
+#navigation{
+	position:relative;
+	top:0px;
+	min-width:320px;
+/*	border:1px solid #999;*/
+	left:0px;
+    overflow:scroll;
+    z-index:5;
+}
+.content{
+	float:left;
+	width:320px;
+	background-color:#ccc;
+	background-image:url(img/UIPinStripe.png);
+}
+/*
+.listRowTemplate_template:hover {
+    background: rgb(38, 127, 239) url(img/selectedRowiPhone.png);
+    -webkit-background-size: 100%;
+    color:white;
+}
+*/
+.listRowTemplate_template {
+    position: relative;
+    list-style-type: none;
+    height: 43px;
+    width: auto;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(172, 172, 172);
+}
+.listRowTemplate_template>.button {
+	background-image:url('img/UITableNext.png');
+	background-repeat: no-repeat;
+	height: 13px;
+	margin-left: auto;
+	position: absolute;
+	right: 11px;
+	top: 17px;
+	width: 8px;
+}
+.list {
+    overflow: hidden;
+    display: block;
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 17px;
+    margin-left: 9px;
+    background-color: white;
+    -webkit-margin-bottom-collapse: separate;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(172, 172, 172);
+    border-top-left-radius: 8px 8px;
+    border-top-right-radius: 8px 8px;
+    border-bottom-right-radius: 8px 8px;
+    border-bottom-left-radius: 8px 8px;
+    cursor: default;
+    -webkit-user-select: none;
+    margin-right: 9px;
+    position: relative;
+    width: auto;
+    -webkit-margin-top-collapse: separate;
+}
+.label_template {
+    position: absolute;
+    left: 9px;
+    top: 11px;
+    right: 30px;
+    width: auto;
+    color: black;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#detailBox {
+    padding: 8px;
+    border-color: rgb(172, 172, 172);
+    border-style: solid;
+    border-width: 1px;
+    background-color: white;
+    -webkit-border-top-right-radius: 8px 8px;
+    -webkit-border-top-left-radius: 8px 8px;
+    -webkit-border-bottom-left-radius: 8px 8px;
+    -webkit-border-bottom-right-radius: 8px 8px;
+    position: relative;
+    margin-left: 9px;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-right: 9px;
+    margin-top: 13px;
+    width: auto;
+    min-height: 64px;
+    height: auto;
+    margin-bottom: 12px;
+}
+.tableHeader {
+	color: #5B6579;
+	font-size: 16px;
+	line-height: 21px;
+	margin: 10px 9px 10px 10px;
+	padding-bottom: 0px;
+	text-align: left;
+}
+#scroll{
+	position:relative;
+	min-height:300px;
+}
+#pageTitle{
+-webkit-box-sizing: border-box;
+font-size: 20px;
+font-weight:bold;
+color:white;
+letter-spacing: -1px;
+line-height: 44px;
+overflow: hidden;
+padding: 0px 25%;
+text-align: center;
+width:320px;
+white-space: nowrap;
+font-family: helvetica, arial, sans-serif;
+text-overflow: ellipsis;
+z-index: 0;
+text-shadow: rgba(0, 0, 0, 0.699219);
+}
+
+
